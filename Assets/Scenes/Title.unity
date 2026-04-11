@@ -270,6 +270,91 @@ Transform:
   - {fileID: 685246398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &311211718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311211719}
+  m_Layer: 0
+  m_Name: Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311211719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311211718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.90505, y: 0, z: -16.12785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 446675379}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &446675378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446675379}
+  - component: {fileID: 446675381}
+  m_Layer: 0
+  m_Name: HayDestroyer
+  m_TagString: DestroyHay
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446675379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446675378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 311211719}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &446675381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446675378}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 60, y: 8, z: 12}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,17 +462,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hay Bale
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
+      propertyPath: m_TagString
+      value: Hay
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6809283
+      value: -38.06
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000046381592
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.14770317
+      value: -20.62
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
       propertyPath: m_LocalRotation.w
@@ -437,6 +526,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 596066175}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: af7e099ccf40c8046b7d720e9d8df558,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 596066179}
   m_SourcePrefab: {fileID: 100100000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
 --- !u!4 &596066171 stripped
 Transform:
@@ -458,7 +551,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596066172}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -510,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413688c9783174591bef8bbcfd8881cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  movementSpeed: {x: 0, y: 0, z: 0}
+  movementSpeed: {x: 0, y: 0, z: 25}
   space: 0
 --- !u!114 &596066176
 MonoBehaviour:
@@ -525,6 +618,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rotationSpeed: {x: 300, y: 50, z: 0}
+--- !u!114 &596066179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596066172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d5efba9c5ce4273bfac855d4573cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTrigger
+  tagFilter: DestroyHay
+--- !u!4 &622186143 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1855226494, guid: c91d458c12526534eb19d65378204353,
+    type: 3}
+  m_PrefabInstance: {fileID: 1401580708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &638203176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1347,8 +1459,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 276919520959730371, guid: c91d458c12526534eb19d65378204353,
         type: 3}
+      propertyPath: hayBalePrefab
+      value: 
+      objectReference: {fileID: 4810451162014864900, guid: edfe20bd513764daba13eb72edaebafd,
+        type: 3}
+    - target: {fileID: 276919520959730371, guid: c91d458c12526534eb19d65378204353,
+        type: 3}
+      propertyPath: haySpawnpoint
+      value: 
+      objectReference: {fileID: 622186143}
+    - target: {fileID: 276919520959730371, guid: c91d458c12526534eb19d65378204353,
+        type: 3}
       propertyPath: movementSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 276919520959730371, guid: c91d458c12526534eb19d65378204353,
+        type: 3}
+      propertyPath: shootInterval
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 341115004147947289, guid: c91d458c12526534eb19d65378204353,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2709791935418197139, guid: c91d458c12526534eb19d65378204353,
         type: 3}
@@ -1399,6 +1532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3722314160362876640, guid: c91d458c12526534eb19d65378204353,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6020313712292669828, guid: c91d458c12526534eb19d65378204353,
         type: 3}
@@ -2175,3 +2313,4 @@ SceneRoots:
   - {fileID: 170076735}
   - {fileID: 289565343}
   - {fileID: 1401580708}
+  - {fileID: 311211719}
