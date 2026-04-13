@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Sheep : MonoBehaviour
@@ -10,6 +12,8 @@ public class Sheep : MonoBehaviour
     private Collider myCollider; // 2
     private Rigidbody myRigidbody;
     private SheepSpawner sheepSpawner;
+    public float heartOffset; // 1
+    public GameObject heartPrefab; // 2
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +30,12 @@ public class Sheep : MonoBehaviour
         sheepSpawner.RemoveSheepFromList(gameObject);
         hitByHay = true; // 1
         runSpeed = 0; // 2
+        TweenDown tweenScale = gameObject.AddComponent<TweenDown>();; // 1
+        tweenScale.targetScale = 0; // 2
+        tweenScale.timeToReachTarget = gotHayDestroyDelay; // 3
         Destroy(gameObject, gotHayDestroyDelay); // 3
+        Instantiate(heartPrefab, transform.position + new Vector3(0, heartOffset, 0), Quaternion.identity);
+
     }
     private void OnTriggerEnter(Collider other){
     if (other.CompareTag("Hay") && !hitByHay){
