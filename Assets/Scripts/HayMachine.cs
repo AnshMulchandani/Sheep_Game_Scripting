@@ -38,6 +38,7 @@ public class HayMachine : MonoBehaviour
         //Creates instances of the prefab
         Instantiate(hayBalePrefab, haySpawnpoint.position,
         Quaternion.identity);
+        SoundManagerScript.Instance.PlayShootClip();
     }
     private void UpdateShooting() {
         shootTimer -= Time.deltaTime;
