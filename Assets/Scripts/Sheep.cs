@@ -33,7 +33,8 @@ public class Sheep : MonoBehaviour
         TweenDown tweenScale = gameObject.AddComponent<TweenDown>();; // 1
         tweenScale.targetScale = 0; // 2
         tweenScale.timeToReachTarget = gotHayDestroyDelay; // 3
-        Destroy(gameObject, gotHayDestroyDelay); // 3
+        tweenScale.timeToDestroy = gotHayDestroyDelay;
+        //Destroy(gameObject, gotHayDestroyDelay); // 3
         Instantiate(heartPrefab, transform.position + new Vector3(0, heartOffset, 0), Quaternion.identity);
 
     }
