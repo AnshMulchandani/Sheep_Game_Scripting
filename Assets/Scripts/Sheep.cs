@@ -51,10 +51,12 @@ public class Sheep : MonoBehaviour
 
     // disable kinematic so it afects gravity and trigger to become rigidbody and destroy after delay
     private void Drop(){
-    sheepSpawner.RemoveSheepFromList(gameObject);
-    myRigidbody.isKinematic = false; // 1
-    myCollider.isTrigger = false; // 2
-    Destroy(gameObject, dropDestroyDelay); // 3
+        if (sheepSpawner != null) {
+        sheepSpawner.RemoveSheepFromList(gameObject);
+        }
+        myRigidbody.isKinematic = false; // 1
+        myCollider.isTrigger = false; // 2
+        Destroy(gameObject, dropDestroyDelay); // 3
     }
 
     public void SetSpawner(SheepSpawner spawner){
