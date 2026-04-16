@@ -39,4 +39,18 @@ public class SheepSpawner : MonoBehaviour
     public void RemoveSheepFromList(GameObject sheep){
         sheepList.Remove(sheep);
     }
+    public void DestroyAllSheep()
+    {
+        // 1. Loop through the list and destroy the GameObjects
+        foreach (GameObject sheep in sheepList)
+        {
+            if (sheep != null) // Safety check in case one was already destroyed
+            {
+                Destroy(sheep);
+            }
+        }
+
+        // 2. Clear the list so it's empty for the next batch
+        sheepList.Clear();
+    }
 }

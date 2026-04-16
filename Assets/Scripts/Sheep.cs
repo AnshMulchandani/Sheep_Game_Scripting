@@ -34,6 +34,7 @@ public class Sheep : MonoBehaviour
         tweenScale.targetScale = 0; // 2
         tweenScale.timeToReachTarget = gotHayDestroyDelay; // 3
         tweenScale.timeToDestroy = gotHayDestroyDelay;
+        GameStateManager.Instance.SavedSheep();
         //Destroy(gameObject, gotHayDestroyDelay); // 3
         Instantiate(heartPrefab, transform.position + new Vector3(0, heartOffset, 0), Quaternion.identity);
         SoundManagerScript.Instance.PlaySheepHitClip();
@@ -55,6 +56,7 @@ public class Sheep : MonoBehaviour
         if (sheepSpawner != null) {
         sheepSpawner.RemoveSheepFromList(gameObject);
         }
+        GameStateManager.Instance.DroppedSheep();
         myRigidbody.isKinematic = false; // 1
         myCollider.isTrigger = false; // 2
         Destroy(gameObject, dropDestroyDelay); // 3
