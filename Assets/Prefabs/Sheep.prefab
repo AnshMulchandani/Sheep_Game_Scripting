@@ -97,8 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   runSpeed: 10
   gotHayDestroyDelay: 1
-  dropDestroyDelay: 4
-  heartOffset: 4
+  dropDestroyDelay: 3
+  heartOffset: 3
   heartPrefab: {fileID: 365486760759602771, guid: 0d375fd8b75d049d99701f472a888acc,
     type: 3}
 --- !u!1001 &5215400582717129369
