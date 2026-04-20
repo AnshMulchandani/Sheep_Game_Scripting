@@ -1273,9 +1273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11db3430ce0494ae4903c0a439004667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  shootClip: {fileID: 8300000, guid: afd9aad0b8c4b1141856b4808d8ea172, type: 3}
-  sheepHitClip: {fileID: 8300000, guid: e97ab3d76ee31794ba31802a0f2a719e, type: 3}
-  sheepDroppedClip: {fileID: 8300000, guid: d396aafd153ba394982f2aa1349363de, type: 3}
+  shootClip: {fileID: 8300000, guid: caea987fe806548a690ba1137ad8bba5, type: 3}
+  sheepHitClip: {fileID: 8300000, guid: dae2b978683184baeb990dc32194630f, type: 3}
+  sheepDroppedClip: {fileID: 8300000, guid: 7fd500f0587b2428cb40a09fe8bf5ebe, type: 3}
 --- !u!1 &2051844282
 GameObject:
   m_ObjectHideFlags: 0

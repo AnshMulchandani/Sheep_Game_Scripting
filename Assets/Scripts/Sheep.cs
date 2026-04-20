@@ -65,7 +65,7 @@ public class Sheep : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other){
     if (other.CompareTag("Hay") && !hitByHay){
-        Destroy(other.gameObject); // 3
+        //Destroy(other.gameObject); // 3
         HitByHay(); // 4
         }
     else if (other.CompareTag("DropSheep")){
